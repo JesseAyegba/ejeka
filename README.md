@@ -1,6 +1,6 @@
-========================
+------------------------
 Getting The App to work:
-========================
+------------------------
 1) Install npm on your computer. Go to https://nodejs.org/en/download/, select your OS and download the Long term support(LTS).
 2) Install npm on your computer
 3) Verify that the installation worked by running ( npm --version ) in your command line.
