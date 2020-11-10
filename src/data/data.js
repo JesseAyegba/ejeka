@@ -23,7 +23,7 @@ export const easySetup = {
   title: "Easy Setup",
   heading: "Super fast and easy onboarding process",
   description:
-    "Get everything ready and setup in under 10 minutes. All you need to add is your information and you're good to go",
+    "Get everything ready and setup in under 10 minutes. All you need to do is fill out our form and you're good to go",
   btnText: "Start Now",
   btnLink: "/signup",
 };
@@ -37,5 +37,18 @@ export const secure = {
   description:
     "Every transaction is stored in our secure cloud database. Never have to worry again about your data",
   btnText: "Learn More",
+  btnLink: "/services",
+};
+
+export const signup = {
+  bg: "var(--energetic_dark_blue)",
+  textColor: "white",
+  flexDirection: "row",
+  image: secure_server,
+  title: "",
+  heading: "Never miss out on anything",
+  description:
+    "Join us today by filling out your sign up form",
+  btnText: "GetStarted",
   btnLink: "/services",
 };

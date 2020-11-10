@@ -6,7 +6,7 @@ function Services() {
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated)
 return (
         <div className="services">
-            { isAuthenticated ? <h1>Dashboard</h1> : <Redirect to="/" /> }
+            <h1>Services</h1>
         </div>
     )
 }

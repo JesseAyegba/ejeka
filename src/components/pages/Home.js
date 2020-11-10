@@ -25,15 +25,6 @@ function Home() {
       <div data-aos="fade-up">
         <HeroSection {...secure} />
       </div>
-      <div data-aos="fade-in">
-        <HeroSection {...makeDeposit} />
-      </div>
-      <div data-aos="fade-up">
-        <HeroSection {...easySetup} />
-      </div>
-      <div data-aos="fade-up">
-        <HeroSection {...secure} />
-      </div>
     </div>
   );
 }

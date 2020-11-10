@@ -1,2 +1,14 @@
 .signup {
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
 }
+
+.signup__text h1{
+    font-size: 60px;
+}
+.signup__image {
+    width: 700px;
+}
+

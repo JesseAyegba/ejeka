@@ -6,7 +6,36 @@
     flex-direction: column;
 }
 .form-field input {
-    height: 40px;
+    height: 60px;
     width: 100%;
     font-size: 20px;
+    border: 2px gray solid;
+    outline: none;
+    border-radius: 2px;
+    
+}
+.form-field input:focus {
+    border: 2px dodgerblue solid;
+    box-shadow: 0 0 4 px 0 dodgerblue;
+}
+.sign-up-form__btn {
+    display: inline-block;
+    height: 60px;
+    font-size: 20px;
+    width: 100%;
+    background-color: var(--energetic_dark_blue);
+    color: white;
+    outline: none;
+    border: none;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 50px;
+}
+.sign-up-form__btn:hover {
+    transform: scale(1.02);
+    background-color: var(--energetic_pink);
+}
+.already {
+    margin-top: 10px;
 }
