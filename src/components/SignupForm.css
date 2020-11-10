@@ -1,11 +1,12 @@
 .sign-up-form {
-    width: 300px;
+    width: 400px;
 }
-.form-field {
+.sign-up-form .form-field {
     display: flex;
     flex-direction: column;
 }
-.form-field input {
+.sign-up-form .form-field input {
+    padding: 10px;
     height: 60px;
     width: 100%;
     font-size: 20px;
@@ -14,9 +15,9 @@
     border-radius: 2px;
     
 }
-.form-field input:focus {
+.sign-up-form .form-field input:focus {
     border: 2px dodgerblue solid;
-    box-shadow: 0 0 4 px 0 dodgerblue;
+    box-shadow: 0 0 4px 0 dodgerblue;
 }
 .sign-up-form__btn {
     display: inline-block;
@@ -38,4 +39,9 @@
 }
 .already {
     margin-top: 10px;
+}
+@media(max-width: 576px) {
+    .sign-up-form {
+        width: 100%;
+    }
 }

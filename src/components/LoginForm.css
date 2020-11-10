@@ -1,0 +1,36 @@
+.login-form {
+    width: 400px;
+}
+.login-form input {
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--energetic_dark_blue);
+    color: white;
+}
+.login-form__btn {
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    background-color: var(--energetic_pink);
+    cursor: pointer;
+    color: white;
+    transition: .2s;
+}
+.login-form__btn:hover {
+    background-color: var(--energetic_dark_blue);
+    transform: scale(1.02);
+}
+@media(max-width: 576px) {
+    .login-form {
+        width: 100%;
+    }
+}

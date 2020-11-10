@@ -4,6 +4,7 @@ import "./Home.css";
 import wallet from "../../svgs/wallet.svg";
 import clipboard from "../../svgs/clipboard.svg";
 import { makeDeposit, easySetup, secure } from "../../data/data";
+import Navbar from "../Navbar"
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -16,6 +17,7 @@ function Home() {
   });
   return (
     <div className="home">
+      <Navbar />
       <div data-aos="fade-in">
         <HeroSection {...makeDeposit} />
       </div>

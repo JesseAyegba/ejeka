@@ -1,10 +1,14 @@
 import React from "react";
 import "./Login.css";
+import LoginForm from "../LoginForm";
+import { Link } from "react-router-dom";
 
 function Login() {
     return(
         <div className="login">
-            <h1>Login Page</h1>
+            <h1>Login</h1>
+            <LoginForm />
+            <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
         </div>
     )
 }

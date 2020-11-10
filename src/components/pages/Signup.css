@@ -11,4 +11,31 @@
 .signup__image {
     width: 700px;
 }
+@media(max-width:992px) {
+    .signup__text {
+        text-align: center;
+    }
+    .signup__image {
+        width: 85%;
+    }
+}
+@media(max-width:768px) {
+    .signup__text {
+        text-align: center;
+    }
+    .signup__image {
+        width: 100%;
+    }
+}
+@media(max-width:576px) {
+    .signup__text {
+        text-align: center;
+    }
+    .signup__text h1 {
+        font-size: 40px;
+    }
+    .signup__image {
+        width: 100%;
+    }
+}
 
