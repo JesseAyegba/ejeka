@@ -1,12 +1,13 @@
 import wallet from "../svgs/wallet.svg";
 import clipboard from "../svgs/clipboard.svg";
 import secure_server from "../svgs/secure_server.svg";
+import invest from "../svgs/invest.svg";
 
 export const makeDeposit = {
   bg: "var(--energetic_blue)",
   textColor: "white",
   flexDirection: "row",
-  image: wallet,
+  image: invest,
   title: "Exclusive access",
   heading: "Make unlimited amounts of deposits with Zero fees",
   description:

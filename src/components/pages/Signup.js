@@ -1,12 +1,14 @@
 import React from 'react';
 import "./Signup.css";
+import "../SignupForm";
+import SignupForm from '../SignupForm';
 
 function Signup() {
     return (
         <div className="signup"> 
-            <h1>Signup Page</h1>
+        <div className="signup__text"></div>
+        <div className="signup__form"><SignupForm /></div>
         </div>
     )
 }
-
 export default Signup;

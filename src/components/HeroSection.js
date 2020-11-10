@@ -23,7 +23,6 @@ function HeroSection({
   });
   return (
     <div
-        data-aos="fade-up"
       className="hero-section"
       style={{ backgroundColor: bg, flexDirection: flexDirection }}
     >

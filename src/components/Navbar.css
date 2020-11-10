@@ -1,6 +1,7 @@
 .navbar {
     background-color: var(--energetic_blue);
     position: sticky;
+    z-index: 1;
     top: 0px;
 }
 .navbar__wrapper {
