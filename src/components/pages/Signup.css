@@ -37,5 +37,8 @@
     .signup__image {
         width: 100%;
     }
+    .signup__form {
+        width: 100%;
+    } 
 }
 

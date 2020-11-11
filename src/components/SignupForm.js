@@ -19,8 +19,8 @@ function SignupForm() {
     let value = e.target.value;
     setformData({
       ...formData,
-      [e.target.name]: value
-    })
+      [e.target.name]: value,
+    });
   };
 
   let handleSubmit = (e) => {
@@ -81,7 +81,7 @@ function SignupForm() {
       </form>
       <div className="already">
         <p>
-          Already have an account?{" "}
+          Already have an account?
           <span>
             <Link to="/login" exact>
               Login
