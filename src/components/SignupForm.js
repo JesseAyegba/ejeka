@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./SignupForm.css";
 
 import { Link } from "react-router-dom";
+import { signUp } from "../requests/signup";
 
 function SignupForm() {
   const [formData, setformData] = useState({
@@ -10,22 +11,29 @@ function SignupForm() {
     password1: "",
     password2: "",
   });
+  const [errors, setErrors] = useState({
+    usernameError: "",
+    emailError: "",
+  });
   useEffect(() => {
     let username = document.querySelector("#username");
     username.focus();
   }, []);
-
+  let validate = () => {
+    
+  }
   let handleChange = (e) => {
     let value = e.target.value;
     setformData({
       ...formData,
-      [e.target.name]: value
-    })
+      [e.target.name]: value,
+    });
   };
 
   let handleSubmit = (e) => {
     let form = document.querySelector("#sign-up-form");
     e.preventDefault();
+    signUp(formData.username, formData.email, formData.password1, formData.password2);
     form.reset();
   };
   return (
@@ -41,6 +49,7 @@ function SignupForm() {
             placeholder="Neon"
             name="username"
           />
+          <p style={{color: "red"}}>{errors.usernameError}</p>
         </div>
         <div className="form-field">
           <label htmlFor="email">Email</label>
@@ -53,6 +62,7 @@ function SignupForm() {
             name="email"
           />
         </div>
+        <p style={{color: "red"}}>{errors.emailError}</p>
         <div className="form-field">
           <label htmlFor="password1">Password</label>
           <input

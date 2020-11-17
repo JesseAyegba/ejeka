@@ -4,8 +4,8 @@ import secure_server from "../svgs/secure_server.svg";
 import invest from "../svgs/invest.svg";
 
 export const makeDeposit = {
-  bg: "var(--energetic_blue)",
-  textColor: "white",
+  bg: "white",
+  textColor: "var(--energetic_blue)",
   flexDirection: "row",
   image: invest,
   title: "Exclusive access",
