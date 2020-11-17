@@ -1,18 +1,26 @@
 .sign-up-form {
     width: 400px;
+    background-color: var(--energetic_light_blue);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
 }
 .sign-up-form .form-field {
     display: flex;
     flex-direction: column;
+    margin-top: 10px
 }
 .sign-up-form .form-field input {
     padding: 10px;
     height: 60px;
     width: 100%;
     font-size: 20px;
-    border: 2px gray solid;
+    border: 1 var(--energetic_blue) solid;
+    background-color: var(--energetic_blue);
     outline: none;
-    border-radius: 2px;
+    border-radius: 5px;
+    color: white;
+    
     
 }
 .sign-up-form .form-field input:focus {
@@ -24,7 +32,7 @@
     height: 60px;
     font-size: 20px;
     width: 100%;
-    background-color: var(--energetic_dark_blue);
+    background-color: var(--energetic_pink);
     color: white;
     outline: none;
     border: none;
@@ -35,13 +43,15 @@
 }
 .sign-up-form__btn:hover {
     transform: scale(1.02);
-    background-color: var(--energetic_pink);
+    background-color: var(--energetic_dark_blue);
 }
 .already {
     margin-top: 10px;
 }
 @media(max-width: 576px) {
     .sign-up-form {
+        border-radius: 0;
+        padding: 30px 10px;
         width: 100%;
     }
 }

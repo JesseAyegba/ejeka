@@ -91,10 +91,10 @@ function SignupForm() {
       </form>
       <div className="already">
         <p>
-          Already have an account?{" "}
+          Already have an account?
           <span>
             <Link to="/login" exact>
-              Login
+               Login
             </Link>
           </span>
         </p>
