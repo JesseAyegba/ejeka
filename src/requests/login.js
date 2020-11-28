@@ -1,11 +1,15 @@
 import { csrftoken } from "./csrf";
+import { store } from "../store/store";
+import { showProgress, hideProgress } from "../store/actions/progress";
+import { loginSuccess, loginFail } from "../store/actions/auth";
 
-export const login = (username, password) => {
+export const login = (email, password) => {
+  store.dispatch(showProgress());
   let data = {
-    username: username,
+    email: email,
     password: password,
   };
-  fetch("/auth/token/login/", {
+  fetch(`${ process.env.REACT_APP_LOGIN_URL }`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -16,10 +20,13 @@ export const login = (username, password) => {
     .then((res) => res.json())
     .then((data) => {
       if (data.auth_token) {
-          console.log("Your login was successful");
+          store.dispatch(loginSuccess(data.auth_token));
+          store.dispatch(hideProgress());
       } else {
-          console.log("Get lost you animal")
+          store.dispatch(loginFail());
+          store.dispatch(hideProgress());
       }
     })
     .catch((errors) => console.log(errors));
 };
+

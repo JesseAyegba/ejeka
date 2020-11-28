@@ -6,6 +6,7 @@ import connect from "../../svgs/connect.svg";
 import Navbar from "../Navbar";
 
 function Signup() {
+  
   return (
     <>
       <Navbar />

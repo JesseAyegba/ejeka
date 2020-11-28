@@ -1,0 +1,27 @@
+.loader { 
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 200;
+    background-color: white;
+    font-size: 100px;
+    color: var(--energetic_pink);
+    animation-name: loader;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes loader {
+    0% {
+        font-size: 50px
+    }
+    50% {
+        font-size: 100px;
+    }
+    100% {
+        font-size: 50px;
+    }
+}

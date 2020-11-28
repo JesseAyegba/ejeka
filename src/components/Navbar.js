@@ -1,14 +1,20 @@
 import React from "react";
 import "./Navbar.css";
-import { NavLink, Link} from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { SiBreaker } from "react-icons/si";
 import { MdMenu } from "react-icons/md";
-import { useDispatch } from "react-redux";
-import { showSidebar } from "../actions/sidebar";
+import { useDispatch, useSelector } from "react-redux";
+import { showSidebar } from "../store/actions/sidebar";
+import { logout } from "../store/actions/auth";
 
 function Navbar() {
-  let dispatch = useDispatch()
-  
+  let dispatch = useDispatch();
+  const token = useSelector((state) => state.auth.token);
+
+  let handleClick = (e) => {
+    dispatch(logout());
+  };
+
   return (
     <div className="navbar">
       <div className="navbar__wrapper">
@@ -31,13 +37,22 @@ function Navbar() {
               Services
             </NavLink>
           </li>
+
           <li className="navbar__link navbar__link--border">
             <NavLink to="/signup" exact>
               Sign up
             </NavLink>
           </li>
         </ul>
-          <MdMenu className="navbar__menu" onClick={ () => dispatch(showSidebar()) }/>
+        {token ? (
+          <button onClick={(e) => handleClick(e)} className="navbar__logout">
+            Logout
+          </button>
+        ) : null}
+        <MdMenu
+          className="navbar__menu"
+          onClick={() => dispatch(showSidebar())}
+        />
       </div>
     </div>
   );

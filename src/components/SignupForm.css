@@ -48,6 +48,10 @@
 .already {
     margin-top: 10px;
 }
+.already a {
+    color: dodgerblue;
+    font-weight: bold;
+}
 @media(max-width: 576px) {
     .sign-up-form {
         border-radius: 0;

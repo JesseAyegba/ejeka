@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom"
 import Navbar from "../Navbar"
 
 function Services() {
+let dispatch = useDispatch();
 
 return (
         <div className="services">

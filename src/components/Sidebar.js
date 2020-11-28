@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { SiFacebook, SiInstagram, SiTwitter, SiLinkedin } from "react-icons/si";
 import { useDispatch } from "react-redux";
-import { hideSidebar } from "../actions/sidebar";
+import { hideSidebar } from "../store/actions/sidebar";
 
 function Sidebar() {
   let dispatch = useDispatch();

@@ -6,18 +6,18 @@ import { signUp } from "../requests/signup";
 
 function SignupForm() {
   const [formData, setformData] = useState({
-    username: "",
+    first_name: "",
     email: "",
     password1: "",
     password2: "",
   });
   const [errors, setErrors] = useState({
-    usernameError: "",
+    first_nameError: "",
     emailError: "",
   });
   useEffect(() => {
-    let username = document.querySelector("#username");
-    username.focus();
+    let first_name = document.querySelector("#first_name");
+    first_name.focus();
   }, []);
   let validate = () => {
     
@@ -33,30 +33,29 @@ function SignupForm() {
   let handleSubmit = (e) => {
     let form = document.querySelector("#sign-up-form");
     e.preventDefault();
-    signUp(formData.username, formData.email, formData.password1, formData.password2);
+    signUp(formData.first_name, formData.email, formData.password1, formData.password2);
     form.reset();
   };
   return (
     <div className="sign-up-form">
       <form id="sign-up-form" onSubmit={(e) => handleSubmit(e)}>
         <div className="form-field">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="first_name">First Name</label>
           <input
             onChange={(e) => handleChange(e)}
-            id="username"
+            id="first_name"
             type="text"
             required
-            placeholder="Neon"
-            name="username"
+            name="first_name"
           />
-          <p style={{color: "red"}}>{errors.usernameError}</p>
+          <p style={{color: "red"}}>{errors.first_nameError}</p>
         </div>
         <div className="form-field">
           <label htmlFor="email">Email</label>
           <input
             onChange={(e) => handleChange(e)}
             id="email"
-            type="text"
+            type="email"
             required
             placeholder="example@gmail.com"
             name="email"
@@ -70,7 +69,6 @@ function SignupForm() {
             id="password1"
             type="password"
             required
-            placeholder="**********"
             name="password1"
           />
         </div>
@@ -81,7 +79,6 @@ function SignupForm() {
             id="password2"
             type="password"
             required
-            placeholder="**********"
             name="password2"
           />
         </div>

@@ -13,7 +13,18 @@
     margin-top: 10px;
     color: whitesmoke;
 }
-
+.login p a {
+    color: dodgerblue;
+    font-weight: bold;
+}
+.login .error {
+    background-color: lightcoral;
+    padding: 30px;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 4px;
+    transition: 0.4s ease-in;
+}
 .login .login-form {
     margin: 0 auto;
 }
